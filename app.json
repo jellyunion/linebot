@@ -1,7 +1,7 @@
 {
   "name": "LINE echo",
   "description": "Echo server for LINE BOT API",
-  "repository": "https://github.com/yuya-takeyama/line-echo",
+  "repository": "https://github.com/jellyunion/linebot",
   "keywords": ["line", "bot"],
   "env": {
     "LINE_CHANNEL_ID": {
