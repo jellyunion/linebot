@@ -19,20 +19,29 @@ class App < Sinatra::Base
         #   "text": msg['content']['text'] + "にゃ"
         # }
         {
-          "messageNotified": 0,
-          "messages": [
-            {
-              "contentType": 1,
-              "text": msg['content']['text'] + "にゃ"
-            },
-            "contentType":8,
-            "contentMetadata":{
-              "STKID":"3",
-              "STKPKGID":"332",
-              "STKVER":"100"
-            }
-          ]
+          "contentType":8,
+          "toType":1,
+          "contentMetadata":{
+            "STKID":"3",
+            "STKPKGID":"332",
+            "STKVER":"100"
+          }
         }
+        # {
+        #   "messageNotified": 0,
+        #   "messages": [
+        #     {
+        #       "contentType": 1,
+        #       "text": msg['content']['text'] + "にゃ"
+        #     },
+        #     "contentType":8,
+        #     "contentMetadata":{
+        #       "STKID":"3",
+        #       "STKPKGID":"332",
+        #       "STKVER":"100"
+        #     }
+        #   ]
+        # }
       }
 
       endpoint_uri = 'https://trialbot-api.line.me/v1/events'
