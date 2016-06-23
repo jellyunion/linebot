@@ -21,19 +21,28 @@ class App < Sinatra::Base
         #   "text": msg['content']['text'] + "にゃ"
         # }
         {
-          "messageNotified": 0,
-          "messages": [
-            {
-              "contentType": 1,
-              "text": msg['content']['text'] + "にゃ"
-            },
-            # {
-            #   "contentType": 2,
-            #   "originalContentUrl": image_url,
-            #   "previewImageUrl": image_url
-            # }
-          ]
+          "contentType":8,
+          "toType":1,
+          "contentMetadata":{
+            "STKID":"3",
+            "STKPKGID":"332",
+            "STKVER":"100"
+          }
         }
+        # {
+        #   "messageNotified": 0,
+        #   "messages": [
+        #     {
+        #       "contentType": 1,
+        #       "text": msg['content']['text'] + "にゃ"
+        #     },
+        #     # {
+        #     #   "contentType": 2,
+        #     #   "originalContentUrl": image_url,
+        #     #   "previewImageUrl": image_url
+        #     # }
+        #   ]
+        # }
         
       }
 
