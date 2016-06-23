@@ -12,10 +12,26 @@ class App < Sinatra::Base
         to: [msg['content']['from']],
         toChannel: 1383378250, # Fixed  value
         eventType: "138311608800106203", # Fixed value
-        content: {
-          "contentType":1,
-          "toType":1,
-          "text": msg['content']['text'] + "にゃ"
+        content:
+        # {
+        #   "contentType":1,
+        #   "toType":1,
+        #   "text": msg['content']['text'] + "にゃ"
+        # }
+        {
+          "messageNotified": 0,
+          "messages": [
+            {
+              "contentType": 1,
+              "text": msg['content']['text'] + "にゃ"
+            },
+            "contentType":8,
+            "contentMetadata":{
+              "STKID":"3",
+              "STKPKGID":"332",
+              "STKVER":"100"
+            }
+          ]
         }
       }
 
