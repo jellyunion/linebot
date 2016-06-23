@@ -6,6 +6,8 @@ require 'rest-client'
 class App < Sinatra::Base
   post '/callback' do
     params = JSON.parse(request.body.read)
+    
+    image_url = 'https://drive.google.com/file/d/1BW9pT2ynef1sPgC3WIAml1Wgl2gv7ZCmvQ/view?usp=sharing'
 
     params['result'].each do |msg|
       request_content = {
@@ -18,7 +20,6 @@ class App < Sinatra::Base
         #   "toType":1,
         #   "text": msg['content']['text'] + "にゃ"
         # }
-        image_url = 'https://drive.google.com/file/d/1BW9pT2ynef1sPgC3WIAml1Wgl2gv7ZCmvQ/view?usp=sharing'
         {
           "messageNotified": 0,
           "messages": [
@@ -28,8 +29,8 @@ class App < Sinatra::Base
             },
             {
               "contentType": 2,
-              "originalContentUrl":image_url,
-              "previewImageUrl":image_url
+              "originalContentUrl": image_url,
+              "previewImageUrl": image_url
             }
           ]
         }
