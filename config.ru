@@ -15,10 +15,12 @@ class App < Sinatra::Base
         content: [
           {
             "contentType": 1,
+            "toType": 1,
             "text": "First message"
           },
           {
             "contentType": 1,
+            "toType": 1,
             "text": "second message"
           }
         ]
