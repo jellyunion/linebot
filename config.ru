@@ -6,8 +6,6 @@ require 'rest-client'
 class App < Sinatra::Base
   post '/callback' do
     params = JSON.parse(request.body.read)
-    
-    image_url = 'https://kigyotv.jp/wp/wp-content/uploads/2014/11/20141110044949-e1415606396142.jpg'
 
     params['result'].each do |msg|
       request_content = {
@@ -20,9 +18,8 @@ class App < Sinatra::Base
             "text": "First message"
           },
           {
-            "contentType": 2,
-            "originalContentUrl": image_url,
-            "previewImageUrl": image_url
+            "contentType": 1,
+            "text": "second message"
           }
         ]
       }
