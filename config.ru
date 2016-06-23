@@ -7,7 +7,7 @@ class App < Sinatra::Base
   post '/callback' do
     params = JSON.parse(request.body.read)
     
-    image_url = 'https://drive.google.com/file/d/1BW9pT2ynef1sPgC3WIAml1Wgl2gv7ZCmvQ/view?usp=sharing'
+    image_url = 'https://kigyotv.jp/wp/wp-content/uploads/2014/11/20141110044949-e1415606396142.jpg'
 
     params['result'].each do |msg|
       request_content = {
