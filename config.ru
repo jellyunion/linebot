@@ -26,9 +26,11 @@ class App < Sinatra::Base
               "contentType": 1,
               "text": msg['content']['text'] + "にゃ"
             },
-            "contentType":2,
-            "originalContentUrl":image_url,
-            "previewImageUrl":image_url
+            {
+              "contentType": 2,
+              "originalContentUrl":image_url,
+              "previewImageUrl":image_url
+            }
           ]
         }
         
